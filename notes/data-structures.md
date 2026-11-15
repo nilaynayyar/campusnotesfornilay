@@ -6,7 +6,7 @@ This section contains introductory study notes.
 ## Basic Algorithms
 
 ### Searching
-- Linear Search: Checks each element sequentially until the target is found.
+- Linear Search: Checks each element sequentially until the target is found. If the target is absent, it reports that the element was not found.
 - Binary Search: Searches a sorted collection by repeatedly dividing the search range in half.
 
 ### Sorting
