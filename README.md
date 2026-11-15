@@ -1,18 +1,27 @@
 # CampusNotes
 
-A simple repository for organizing campus notes and academic resources.
+CampusNotes is a project for organizing campus notes and academic resources.
+
+## Features
+
+- Organizing lecture notes
+- Managing academic resources
+- Searching notes by keyword
+- Filtering notes by subject
+- Supporting revision and study activities
 
 ## Project Structure
 
-- `notes/` - Contains subject-wise study notes.
-- `resources/` - Contains academic resources and references.
+- `notes/` - Lecture notes and notes management utilities.
+- `modules/` - Additional features such as search and subject filtering.
+- `resources/` - Academic resources and references.
 
-## Topics Covered
+## Running the Project
 
-- Data Structures
-- Searching Algorithms
-- Sorting Algorithms
+Run the notes manager:
 
-## Purpose
+```bash
+python notes/notes_manager.py
 
-CampusNotes helps students organize and maintain their academic study material in one place.
+
+```
