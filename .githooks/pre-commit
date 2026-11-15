@@ -1,0 +1,18 @@
+#!/bin/sh
+
+git diff --cached --name-only --diff-filter=ACMR |
+while IFS= read -r file
+do
+    if [ "$file" = ".githooks/pre-commit" ]; then
+        continue
+    fi
+
+    if git show ":$file" | grep -nE 'TODO|FIXME'
+    then
+        echo "ERROR: TODO or FIXME found in staged file: $file"
+        exit 1
+    fi
+done || exit 1
+
+echo "Pre-commit check passed."
+exit 0
