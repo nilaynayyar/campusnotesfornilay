@@ -3,7 +3,7 @@
 import os
 
 
-def get_note_statistics(notes_dir="notes"):
+def get_note_statistics(notes_dir: str = "notes") -> dict[str, int]:
     """Return the number of notes and total words across .txt and .md files."""
     if not os.path.isdir(notes_dir):
         return {"note_count": 0, "total_words": 0}
@@ -18,7 +18,7 @@ def get_note_statistics(notes_dir="notes"):
             if os.path.isfile(filepath):
                 try:
                     with open(filepath, "r", encoding="utf-8") as file:
-                        total_words += len(file.read().split())
+                        total_words += sum(len(line.split()) for line in file)
                     note_count += 1
                 except (OSError, UnicodeDecodeError):
                     continue
